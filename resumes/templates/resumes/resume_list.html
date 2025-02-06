@@ -1,0 +1,15 @@
+{% extends 'resumes/base.html' %}
+
+{% block content %}
+<h2>My Resumes</h2>
+<ul>
+    {% for resume in resumes %}
+        <li>
+            <strong>{{ resume.full_name }}</strong> - 
+            <a href="{% url 'resume-detail' resume.id %}">View</a> | 
+            <a href="{% url 'resume-edit' resume.id %}">Edit</a> | 
+            <a href="{% url 'resume-pdf' resume.id %}">Download PDF</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

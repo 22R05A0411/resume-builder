@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Georgia', serif; background: #ffffff; color: #333; }
+        .resume-container { width: 700px; margin: auto; padding: 20px; border: 2px solid black; }
+        .header { text-align: center; font-size: 24px; font-weight: bold; }
+        .section { margin-top: 20px; }
+        .section h2 { border-bottom: 2px solid black; }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">{{ resume.full_name }}</div>
+        <p>Email: {{ resume.email }}</p>
+        <p>Phone: {{ resume.phone }}</p>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>{{ resume.summary }}</p>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <p>{{ resume.skills }}</p>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <p>{{ resume.experience }}</p>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>{{ resume.education }}</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; padding: 20px; border: 1px solid black; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ resume.full_name }}</h1>
+        <p>Email: {{ resume.email }}</p>
+        <p>Phone: {{ resume.phone }}</p>
+        <h2>Summary</h2>
+        <p>{{ resume.summary }}</p>
+        <h2>Skills</h2>
+        <p>{{ resume.skills }}</p>
+        <h2>Experience</h2>
+        <p>{{ resume.experience }}</p>
+        <h2>Education</h2>
+        <p>{{ resume.education }}</p>
+    </div>
+</body>
+</html>

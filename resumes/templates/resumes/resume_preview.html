@@ -1,0 +1,16 @@
+{% extends 'resumes/base.html' %}
+
+{% block content %}
+<h2>Preview Resume</h2>
+<div id="resume-preview">
+    <h3>{{ resume.full_name }}</h3>
+    <p>Email: {{ resume.email }}</p>
+    <p>Phone: {{ resume.phone }}</p>
+    <p><strong>Summary:</strong> {{ resume.summary }}</p>
+    <p><strong>Skills:</strong> {{ resume.skills }}</p>
+    <p><strong>Experience:</strong> {{ resume.experience }}</p>
+    <p><strong>Education:</strong> {{ resume.education }}</p>
+</div>
+
+<a href="{% url 'resume-pdf' resume.id %}" class="btn">Download PDF</a>
+{% endblock %}

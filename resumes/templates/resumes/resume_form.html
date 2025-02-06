@@ -1,0 +1,39 @@
+{% extends 'resumes/base.html' %}
+
+{% block content %}
+<h2>Create/Edit Resume</h2>
+<form id="resume-form" method="POST">
+    {% csrf_token %}
+    <label>Full Name:</label>
+    <input type="text" name="full_name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" required>
+
+    <label>Summary:</label>
+    <textarea name="summary" required></textarea>
+
+    <label>Skills:</label>
+    <textarea name="skills" required></textarea>
+
+    <label>Experience:</label>
+    <textarea name="experience" required></textarea>
+
+    <label>Education:</label>
+    <textarea name="education" required></textarea>
+
+    <label>Choose Resume Template:</label>
+    <select name="template_choice">
+        <option value="classic">Classic</option>
+        <option value="modern">Modern</option>
+        <option value="elegant">Elegant</option>
+    </select>
+
+    <button type="submit">Save Resume</button>
+</form>
+
+<script src="{% static 'resumes/script.js' %}"></script>
+{% endblock %}

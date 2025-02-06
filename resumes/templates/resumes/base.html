@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="{% static 'resumes/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Online Resume Builder</h1>
+        <nav>
+            <a href="{% url 'resume-list' %}">My Resumes</a>
+            <a href="{% url 'resume-create' %}">Create Resume</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
